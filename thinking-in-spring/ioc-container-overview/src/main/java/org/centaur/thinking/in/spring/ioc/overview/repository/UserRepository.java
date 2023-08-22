@@ -1,4 +1,4 @@
-package org.centaur.thinking.in.spring.ioc.overview.dependency.repository;
+package org.centaur.thinking.in.spring.ioc.overview.repository;
 
 import org.centaur.thinking.in.spring.ioc.overview.domain.User;
 import org.springframework.beans.factory.BeanFactory;

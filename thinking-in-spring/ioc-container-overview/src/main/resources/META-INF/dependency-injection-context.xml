@@ -8,7 +8,7 @@
     <!--通过导入复用 dependency-lookup-context.xml-->
     <import resource="dependency-lookup-context.xml" />
 
-    <bean id = "userRepository" class="org.centaur.thinking.in.spring.ioc.overview.dependency.repository.UserRepository"
+    <bean id = "userRepository" class="org.centaur.thinking.in.spring.ioc.overview.repository.UserRepository"
           autowire="byType"><!-- Auto-Wiring -->
         <!-- 手动配置 -->
 <!--        <property name="users">-->
