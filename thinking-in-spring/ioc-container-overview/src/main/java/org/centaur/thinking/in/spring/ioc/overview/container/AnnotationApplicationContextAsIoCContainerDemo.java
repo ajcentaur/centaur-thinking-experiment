@@ -24,7 +24,7 @@ public class AnnotationApplicationContextAsIoCContainerDemo {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext();
         // 将 AnnotationApplicationContextAsIoCContainerDemo.class 作为配置类加载
         applicationContext.register(AnnotationApplicationContextAsIoCContainerDemo.class);
-        // 启动容器加载Bean
+        // 启动应用上下文
         applicationContext.refresh();
         lookupByType(applicationContext);
         lookupCollectionByType(applicationContext);
