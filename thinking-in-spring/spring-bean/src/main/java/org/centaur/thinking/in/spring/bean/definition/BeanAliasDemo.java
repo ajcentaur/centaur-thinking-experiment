@@ -12,8 +12,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class BeanAliasDemo {
     public static void main(String[] args) {
+        // 配置XML配置文件
+        // 启动Spring应用上下文
         BeanFactory beanFactory = new ClassPathXmlApplicationContext("classpath:/META-INF/dependency-definition-context.xml");
         User user = beanFactory.getBean("user", User.class);
+        // 通过别名 centaur-user 获取曾用名为user的 Bean
         User centaurUser = beanFactory.getBean("centaur-user", User.class);
         System.out.println("centaur-user 与 user Bean是否相同：" + (user == centaurUser));
     }
