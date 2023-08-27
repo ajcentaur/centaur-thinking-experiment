@@ -34,4 +34,11 @@ public class User {
                 ", name='" + name + '\'' +
                 '}';
     }
+
+    public static User createUser(){
+        User user = new User();
+        user.setId(3L);
+        user.setName("静态方法实例化user");
+        return user;
+    }
 }
