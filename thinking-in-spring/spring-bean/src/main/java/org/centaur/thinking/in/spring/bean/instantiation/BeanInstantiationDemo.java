@@ -14,14 +14,14 @@ public class BeanInstantiationDemo {
 
     public static void main(String[] args) {
         BeanFactory beanFactory = new ClassPathXmlApplicationContext("classpath:/META-INF/dependency-instantiation-context.xml");
-        //第一种方法：通过静态方法实例化
+        //第一种方式：通过静态方法实例化
         User staticMethodUser = beanFactory.getBean("user-by-static-method", User.class);
-        //第二种方法：通过工厂方法实例化
+        //第二种方式：通过工厂方法实例化
         User factoryMethodUser = beanFactory.getBean("user-by-factory-method", User.class);
         System.out.println("通过静态方法实例化User Bean：" + staticMethodUser);
         System.out.println("通过工厂方法实例化User Bean：" + factoryMethodUser);
         System.out.println("staticMethodUser和factoryMethodUser是否相等：" + (staticMethodUser == factoryMethodUser));
-        //第三种方法：通过FactoryBean实例化
+        //第三种方式：通过FactoryBean实例化
         User factoryBeanUser = beanFactory.getBean("userFactoryBean", User.class);
         System.out.println("通过FactoryBean实例化User Bean：" + factoryBeanUser);
     }
